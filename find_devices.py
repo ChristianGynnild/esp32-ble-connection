@@ -6,12 +6,10 @@ from typing import Optional
 from dataclasses import dataclass
 import draccus
 
-
 @dataclass
 class Config:
     """find BLE devices"""
-    name: Optional[str] = None            # Name to search for
-
+    name: str = None            # Name to search for
 
 async def scan_for_devices(name):
     """Scans for nearby BLE devices and prints their details."""
